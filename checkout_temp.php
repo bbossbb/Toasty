@@ -35,16 +35,16 @@ $totalprice2 = $totalprice['sum'];
 
 //echo $paymenttypeid ;
 //echo "\n";
-echo $paymenttypeid = $_POST['order'];
-echo "\n";
-echo $ordernote = $_POST['ordernote'];
-echo "\n";
-echo $shipmenttypeid = $_POST['shipmentid'];
-echo "\n";
-echo $delivery_date = $_POST['date1'];
-echo "\n";
-echo $timeslotid = $_POST['timeslot'];
-echo $delivery_date;
+// echo $paymenttypeid = $_POST['order'];
+// echo "\n";
+// echo $ordernote = $_POST['ordernote'];
+// echo "\n";
+// echo $shipmenttypeid = $_POST['shipmentid'];
+// echo "\n";
+// echo $delivery_date = $_POST['date1'];
+// echo "\n";
+// echo $timeslotid = $_POST['timeslot'];
+// echo $delivery_date;
 if(!empty($delivery_date)){
 
 $q12 ="SELECT paymenttypeid FROM paymenttype WHERE paymenttypeid = $paymenttypeid";
@@ -92,6 +92,7 @@ while($row=$result19->fetch_array()){
     }
     else{
         //echo "Error: " . $q11 . "" . mysqli_error($con);
+        header('Refresh:0.0001; url = checkout.php');
     }
 }
 
